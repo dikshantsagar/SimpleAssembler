@@ -14,4 +14,5 @@ eg Assembly code [performs (i+j)*(k+l)] :
 *     J DS 5
 *     K DS 5
 *     L DS 4
+* INTER DS 0
 
