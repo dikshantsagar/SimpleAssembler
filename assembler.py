@@ -1,3 +1,5 @@
+
+
  
 opcode = {
 
@@ -27,4 +29,23 @@ for x in file:
         if(s!=""):
             z.append(s)
     lines.append(z)
+
+
+for k in range(len(lines)):
+    for i in range(len(lines[k])):                 
+        if(lines[k][i] in opcode):                       #converting opcodes to opcode binary
+            lines[k][i]=opcode[lines[k][i]]
+
+get_bin = lambda x, n: format(x, 'b').zfill(n)
+memorycounter=1
+memory={}
+
+for k in range(len(lines)):
+    for i in range(len(lines[k])):
+        if(lines[k][i] in memory):
+            lines[k][i]=memory[lines[k][i]][0]
+
+
 print(lines)
+
+
